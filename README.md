@@ -1,5 +1,9 @@
 # IEEE CVCCN Final Project 🌐
 
+<p align="center">
+  <img src="b5c2bed4-cd28-43ef-9a17-99f0842400ab.png" alt="CVCCN 2026 Banner" />
+</p>
+
 This repository contains the **final version** of the website for the **IEEE Computer Vision and Cognitive Computing Network (CVCCN)** event/project.
 
 🔗 **Live Site:**  
