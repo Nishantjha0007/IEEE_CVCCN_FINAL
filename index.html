@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVCCN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/png" href="nitrr.png">
+</head>
+<body>
+    <!-- Loader Overlay -->
+    <div id="site-loader">
+        <div class="loader-dual-ring"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
+    <style>
+        @keyframes spinLoader {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="nitrr.png" alt="University Logo" class="logo">
+                    <div class="header-text">
+                        <h1 class="conference-title">CVCCN - 2026</h1>
+                        <p class="conference-subtitle">International Conference on Computer Vision, Communication, Computing and Nanoelectronics</p>
+                        <p class="conference-date">January 20-21, 2026 | NIT Raipur, India</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="https://www.ieee.org/" target="_blank" rel="noopener" style="display: flex; align-items: center; height: 40px;">
+                        <img src="ieee.png" alt="IEEE Official Logo" style="height: 40px; width: auto; display: block;" />
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#dates" class="nav-link">Important Dates</a></li>
+                <li><a href="#call-for-papers" class="nav-link">Call for Papers</a></li>
+                <li><a href="#speakers" class="nav-link">Keynote Speakers</a></li>
+                <li><a href="#registration" class="nav-link">Registration</a></li>
+                <li><a href="#committee" class="nav-link">Committee</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Computer Vision, Communication, Computing and Nanoelectronics</h2>
+                <p class="hero-description">Join leading researchers, academicians, and industry experts to showcase and exchange the latest fundamental advances in Computer Vision, Communication, Computing and Nanoelectronics for state-of-the-art practices in Electronics Engineering.</p>
+                <div class="hero-actions">
+                    <a href="#call-for-papers" class="btn btn-primary btn-large">Submit Paper</a>
+                    <a href="#registration" class="btn btn-secondary btn-large">Register Now</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="countdown-stat" style="width:100%; text-align:center;">
+                        <span id="hero-countdown" style="font-size:2.5rem; font-weight:700; color:#fbbf24;"></span>
+                        <div style="color:#fff; font-size:1.1rem; margin-top:0.5rem; letter-spacing:2px;">UNTIL CONFERENCE BEGINS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section id="dates" class="dates-section">
+        <div class="container">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Starting date of Paper Submission</h3>
+                        <p class="date">April 1, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Deadline for Paper submission</h3>
+                        <p class="date">June 1, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Acceptance Notification</h3>
+                        <p class="date">September 15, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Early bird registration end</h3>
+                        <p class="date">November 15, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Registration End</h3>
+                        <p class="date">November 30, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Date of Conference</h3>
+                        <p class="date">January 20-21, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content-full">
+                <h2 class="section-title">About CVCCN 2026</h2>
+                <p class="about-text">
+                    The International Conference on Computer Vision, Communication, Computing and Nanoelectronics (CVCCN - 2026) aims to bring together students, researchers, academia, and industry practitioners to showcase and exchange the latest fundamental advances in Computer Vision, Communication, Computing and Nanoelectronics for state-of-the-art practices in Electronics Engineering.
+                </p>
+                <p class="about-text">
+                    This theme will invite the participants to discuss various issues and its future direction of various Emerging Technologies and its Industry applications in the field of Deep learning, Multimedia security, IoT, Image processing, VLSI design, Computing, Semiconductor Devices, and Wireless communication.
+                </p>
+                <h3 style="color: #1e40af; margin-top: 2rem; margin-bottom: 1rem;">Scope of the Conference:</h3>
+                <p class="about-text">
+                    Image Processing, Computer Vision and AI, VLSI and nanoelectronics, Wireless Communication, Computer communication networks, Signal Processing, Biomedical signal and image processing, Machine learning for communication and signal processing, RF, Microwave and Antennas.
+                </p>
+                <h3 style="color: #1e40af; margin-top: 2rem; margin-bottom: 1rem;">About the Department:</h3>
+                <p class="about-text">
+                    Electronics and Communication Engineering department is one of the significant engineering branches of NIT Raipur and, has been contributing to the institute since the time of inception in 1985. The Department aims at imparting the state of the art knowledge and skills to the students, thus, developing them into competent engineers, entrepreneurs, scientists, and academicians.
+                </p>
+                <h3 style="color: #1e40af; margin-top: 2rem; margin-bottom: 1rem;">National Institute of Technology Raipur:</h3>
+                <p class="about-text">
+                    (Formerly Government Engineering College Raipur) was established in 1956 and, enquired the status of National Institute of Technology (an Institution of National Importance) on 1st December 2005. The Institute is committed to the challenging task of development of technical education by preparing seasoned graduates in highly sophisticated field of engineering and technology. Core values adopted by the Institute are guiding principles are Integrity, Excellence, Transparency and Accountability. At present the Institute offers graduate level courses in twelve disciplines, postgraduate in thirteen disciplines and doctorate program in all the advanced and core fields of engineering.
+                </p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Networking</h3>
+                        <p>Connect with leading experts and peers</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Discover cutting-edge research and technologies</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Reach</h3>
+                        <p>International participation and collaboration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call for Papers -->
+    <section id="call-for-papers" class="call-papers-section">
+        <div class="container">
+            <h2 class="section-title" style="color:#b91c1c; font-style:italic;">Topics for Submission</h2>
+            <p class="section-subtitle">Students, Research Scholars, Scientist, Faculties, and Industrial Executives are welcome to submit the full-length research paper of the following themes although not limited to:</p>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Signal and Image Processing</h3>
+                    <ul>
+                        <li>Signal and Image Processing Techniques</li>
+                        <li>Artificial Intelligence and Machine Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision and AI</li>
+                    </ul>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>VLSI and Nanoelectronics</h3>
+                    <ul>
+                        <li>VLSI and Nanoelectronics</li>
+                        <li>Optoelectronic Materials and Devices</li>
+                        <li>DSP Implementation and architectures</li>
+                        <li>RF, Microwave and Antennas</li>
+                    </ul>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Wireless Communication</h3>
+                    <ul>
+                        <li>Wireless Communication and Systems</li>
+                        <li>5G and 6G Technologies</li>
+                        <li>Quantum Computing and Communication</li>
+                        <li>Computer Networks and IoT</li>
+                    </ul>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security and Advanced Topics</h3>
+                    <ul>
+                        <li>Multimedia and Network Security</li>
+                        <li>Cryptography</li>
+                        <li>THz Technologies and Systems</li>
+                        <li>MIMO Antenna</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-top: 3rem;">
+                <h3 style="color: #1e40af; text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">Manuscript submission Portal:</h3>
+                <p style="font-style:italic; color:#ef4444; font-weight:600; text-align:center;">Papers to be Submitted using CMT portal</p>
+                <p style="text-align:center; margin-bottom:1rem;"><a href="https://cmt3.research.microsoft.com/CVCCN2026" style="color: #1e40af; font-style:italic; text-decoration:underline;">https://cmt3.research.microsoft.com/CVCCN2026</a></p>
+                <p style="color: #ef4444; font-style: italic; text-align:center;">All the submitted papers will be subjected to a "Plagiarism check" by Turnitin Software. Papers achieving less than 20% similarity score will only be sent for the formal review. The paper must be submitted only in PDF format.</p>
+            </div>
+            
+            <div class="submission-guidelines">
+                <h3>Submission Guidelines</h3>
+                <div class="guidelines-grid">
+                    <div class="guideline">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Paper Format</h4>
+                        <p>CMT portal submission, PDF format</p>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-language"></i>
+                        <h4>Language</h4>
+                        <p>English only, properly formatted</p>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-search"></i>
+                        <h4>Review Process</h4>
+                        <p>Double-blind peer review</p>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-award"></i>
+                        <h4>Publication</h4>
+                        <p>IEEE Xplore, Springer, Taylor & Francis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keynote Speakers -->
+    <section id="speakers" class="speakers-section">
+        <div class="container">
+            <h2 class="section-title">Keynote Speakers</h2>
+            <div class="speakers-grid">
+                <a href="https://nps.edu/faculty-profiles/-/cv/pstanica" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="pantelimon.png" alt="Dr. Sarah Johnson" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Prof. Pantalion Stanica</h3>
+                            <p class="speaker-title">Naval Postgraduate School, USA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.mi.sanu.ac.rs/cv/cvmihaljevic.htm" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="misamihaljevic.jpg" alt="Prof. Michael Chen" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Prof. Miodrag Mihaljević</h3>
+                            <p class="speaker-title">Serbian Academy of Sciences and Arts, Serbia</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://isi.irins.org/profile/61161" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="subhamoy.gif" alt="Dr. Priya Sharma" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Prof. Subhamoy Maitra</h3>
+                            <p class="speaker-title">Indian Statistical Institute, Kolkata</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://home.iitk.ac.in/~chauhan/" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="chauhan.jpeg" alt="Prof. Yogesh Chauhan" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Prof. Yogesh Chauhan</h3>
+                            <p class="speaker-title">Indian Institute of Technology Kanpur</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.iitp.ac.in/~pkumar/" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="Preetam.jpg" alt="Prof. Preetam Kumar" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Prof. Preetam Kumar</h3>
+                            <p class="speaker-title">Indian Institute of Technology Patna</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://uwaterloo.ca/systems-design-engineering/profile/akmishra" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="Akshaya-Mishra.png" alt="Dr. Akshya Mishra" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Dr. Akshya Mishra</h3>
+                            <p class="speaker-title">University of Waterloo, Canada</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://facultyweb.kennesaw.edu/schakra2/" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="sumit.png" alt="Dr. Sumit Chakravarty" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Dr. Sumit Chakravarty</h3>
+                            <p class="speaker-title">Kennesaw State University, USA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.xmu.edu.my/TAN_Swee_Tiam/list.htm" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                    <div class="speaker-card">
+                        <img src="swee tiam.jpeg" alt="Dr. Tan Swee Tiam" class="speaker-image">
+                        <div class="speaker-info">
+                            <h3 style="text-decoration:underline;">Dr. Tan Swee Tiam</h3>
+                            <p class="speaker-title">Xiamen University, Malaysia</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="registration" class="registration-section">
+        <div class="container">
+            <h2 class="section-title">Registration</h2>
+            <div class="registration-content">
+                
+                <!-- Detailed Registration Table -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-top: 2rem;" class="registration-box">
+                    <h3 style="color: #1e40af; text-align: center; margin-bottom: 2rem;">Detailed Registration Fees</h3>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                            <thead>
+                                <tr style="background: #f8fafc;">
+                                    <th colspan="3" style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center; font-weight:700;">Registration fees per paper per author</th>
+                                </tr>
+                                <tr style="background: #f8fafc;">
+                                    <th style="border: 1px solid #e2e8f0; padding: 1rem; text-align: left;">Category</th>
+                                    <th style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Indian (INR)</th>
+                                    <th style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Foreign (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; font-weight: 600;">Early bird registration<br><small>(Last date: 15-Nov-25)</small></td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Research scholars/Students: ₹9,000 + GST@18%</td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">$150 + GST@18%</td>
+                                </tr>
+                                <tr style="background: #f8fafc;">
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem;"></td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Faculty/Scientists/Industry: ₹10,000 + GST@18%</td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">$200 + GST@18%</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; font-weight: 600;">General registration<br><small>(Last date: 30-Nov-25)</small></td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Research scholars/Students: ₹10,000 + GST@18%</td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">$200 + GST@18%</td>
+                                </tr>
+                                <tr style="background: #f8fafc;">
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem;"></td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">Faculty/Scientists/Industry: ₹11,000 + GST@18%</td>
+                                    <td style="border: 1px solid #e2e8f0; padding: 1rem; text-align: center;">$250 + GST@18%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                        <h4 style="color: #1e40af; margin-bottom: 1rem;">Registration Details & Payment Information</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <p style="color: #555; margin-bottom: 0.5rem;"><strong>Registration fee is payable by Any Online Mode in favour of account of</strong></p>
+                                <p style="color: #b91c1c; font-weight: 700;">"Director, NIT Raipur"</p>
+                                <p style="color: #b91c1c; font-weight: 700;"><strong>A/C No.:</strong> 30042955244</p>
+                                <p style="color: #b91c1c; font-weight: 700;"><strong>IFSC Code:</strong> SBIN0002852</p>
+                                <p style="color: #b91c1c; font-weight: 700; margin-bottom: 1rem;"><strong>Branch:</strong> GCET Branch, Raipur (C.G.)</p>
+                            </div>
+                            <div>
+                                <p style="color: #555; margin-bottom: 0.5rem;">• It is mandatory for at least one author of an accepted paper for the paper to appear in the proceeding. Co-authors must register by paying full registration fees in case they want to attend and get presentation certificate as a conference delegate.</p>
+                                <p style="color: #555; margin-bottom: 0.5rem;">• The application should be made on the registration form and should accompany registration fee as below:</p>
+                                <p style="color: #555; margin-bottom: 0.5rem;">• Registration fee is non-refundable under any circumstances.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:2rem; background:#fff; padding:1.5rem; border-radius:8px;">
+                        <h4 style="color:#b91c1c; font-weight:700;">Note:</h4>
+                        <ul style="color:#b91c1c;">
+                            <li>To be paid by the first author/ corresponding author after the manuscript acceptance.</li>
+                            <li>No registration after 30th November, 2025 shall be entertained.</li>
+                            <li>The registration fees include conference certificate and publication indexing site.</li>
+                        </ul>
+                        <p style="color:#6d28d9; font-weight:700; margin-top:1rem;">Selected and presented papers will be published as conference proceeding and will be indexed in one of the following (but not limited to) platforms:</p>
+                        <div style="margin-top:1.2rem; text-align:center;">
+                            <span style="font-size:1.15rem; color:#1e293b; font-weight:700; display:inline-flex; align-items:center; gap:0.5rem;">
+                                <i class="fas fa-book-open" style="color:#1e40af;"></i>
+                                IEEE Xplore &nbsp;|&nbsp; Springer &nbsp;|&nbsp; Taylor &amp; Francis &nbsp;|&nbsp; Elsevier &nbsp;|&nbsp; IOP
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee -->
+    <section id="committee" class="committee-section">
+        <div class="container">
+            <h2 class="section-title">Organizing Committee</h2>
+            <div class="committee-tabs">
+                <button class="tab-btn active" data-tab="organizing">Organizing Committee</button>
+                <button class="tab-btn" data-tab="technical">Technical Committee</button>
+                <button class="tab-btn" data-tab="advisory">Advisory Board</button>
+            </div>
+            <div class="committee-content">
+                <div class="tab-content active" id="organizing">
+                    <div class="committee-grid">
+                        <div class="committee-member">
+                            <h4>Prof. N.V Ramana Rao</h4>
+                            <p>Chief Patron</p>
+                            <p class="affiliation">Director, NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Prof. G. P. S. C. Mishra</h4>
+                            <p>Patron</p>
+                            <p class="affiliation">Dean(R&amp;C), NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Shrish Verma</h4>
+                            <p>Patron</p>
+                            <p class="affiliation">Dean (Academics), NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Toshanlal Meenpal</h4>
+                            <p>Chairman</p>
+                            <p class="affiliation">Asso. Prof., ECE, NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Saikat Majumder</h4>
+                            <p>Organizing Secretary/Coordinator</p>
+                            <p class="affiliation">Asst. Prof., ECE, NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Anshul Gupta</h4>
+                            <p>Organizing Secretary/Coordinator</p>
+                            <p class="affiliation">Asst. Prof., ECE, NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Ashish Kumar</h4>
+                            <p>Organizing Secretary/Coordinator</p>
+                            <p class="affiliation">Asst. Prof., ECE, NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Mayur V. Katwe</h4>
+                            <p>Organizing Secretary/Coordinator</p>
+                            <p class="affiliation">Asst. Prof., ECE, NIT Raipur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="technical">
+                    <div class="committee-grid">
+                        <div class="committee-member">
+                            <h4>Dr. B. Acharya</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. A. S. Raghuwanshi</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. B. Patnaik</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. C. Sahu</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. S. Deshmukh</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. S. K. Saha</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. A. Naugarhiya</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. K. K. Nigam</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Mr. S. Chakrabarty</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. D. Muchahary</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. S. Tirkey</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Raipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Vijayshri Chaurasia</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">MANIT Bhopal</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Md. Farukh Hashmi</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Warangal</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Vishal Satpute</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">VNIT Nagpur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Madhusudhan Mishra</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NERIST</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Shrivishal Tripathi</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">IIIT NR</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Manish Kashyap</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">MANIT Bhopal</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Kuldeep Singh</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">MNIT Jaipur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Anjali Potnis</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NITTRR Bhopal</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Nikhildeep Gupta</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">VNIT Nagpur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Anand Sharma</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">MNNIT Allahabad</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Situ Rani Patre</h4>
+                            <p>Technical Committee</p>
+                            <p class="affiliation">NIT Rourkela</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="advisory">
+                    <div class="committee-grid">
+                        <a href="https://nps.edu/faculty-profiles/-/cv/pstanica" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+                            <div class="committee-member">
+                                <h4 style="text-decoration:underline;">Prof. Pantelimon Stanica</h4>
+                                <p>International Advisory Committee</p>
+                                <p class="affiliation">Naval Postgraduate School, USA</p>
+                            </div>
+                        </a>
+                        <div class="committee-member">
+                            <h4>Prof. Miodrag Mihaljević</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Serbian Academy of Sciences and Arts, Serbia</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Prof. Subhamoy Maitra</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Indian Statistical Institute, Kolkata</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Prof. Yogesh Chauhan</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Indian Institute of Technology Kanpur</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Prof. Preetam Kumar</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Indian Institute of Technology Patna</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Akshaya Mishra</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">University of Waterloo, Canada</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Sumit Chakravarty</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Kennesaw State University, USA</p>
+                        </div>
+                        <div class="committee-member">
+                            <h4>Dr. Tan Swee Tiam</h4>
+                            <p>International Advisory Committee</p>
+                            <p class="affiliation">Xiamen University, Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section" style="background:#f8fafc; padding:3rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="color:#1e40af; text-align:center; margin-bottom:2.5rem;">Contact Information</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:2.5rem; justify-content:center;">
+                <!-- Left: Venue and General Info -->
+                <div style="flex:1 1 320px; min-width:300px; max-width:420px; background:#fff; border-radius:12px; box-shadow:0 4px 16px rgba(30,64,175,0.07); padding:2rem 1.5rem; margin-bottom:1.5rem;">
+                    <div style="margin-bottom:2rem;">
+                        <i class="fas fa-map-marker-alt" style="color:#1e40af; font-size:1.5rem; margin-right:0.7rem;"></i>
+                        <span style="font-size:1.15rem; font-weight:600; color:#1e293b;">Venue</span>
+                        <div style="margin-top:0.5rem; color:#334155;">
+                            Department of Electronics & Communication Engineering<br>
+                            National Institute of Technology, Raipur<br>
+                            Raipur - 492010, India
+                        </div>
+                    </div>
+                    <div style="margin-bottom:2rem;">
+                        <i class="fas fa-info-circle" style="color:#1e40af; font-size:1.5rem; margin-right:0.7rem;"></i>
+                        <span style="font-size:1.15rem; font-weight:600; color:#1e293b;">Important Notes</span>
+                        <ul style="margin:0.7rem 0 0 1.5rem; color:#475569; font-size:1rem;">
+                            <li>To be paid by the first author/corresponding author after manuscript acceptance.</li>
+                            <li>No registration after 30th November, 2025 shall be entertained.</li>
+                            <li>The registration fees include conference certificate and publication indexing site.</li>
+                            <li>Selected and presented papers will be published as conference proceedings and indexed in platforms: IEEE Xplore, Springer, Taylor & Francis, Elsevier, IOP.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right: Organizing Secretaries -->
+                <div style="flex:1 1 320px; min-width:300px; max-width:480px; background:#fff; border-radius:12px; box-shadow:0 4px 16px rgba(30,64,175,0.07); padding:2rem 1.5rem; margin-bottom:1.5rem;">
+                    <div style="margin-bottom:1.5rem;">
+                        <i class="fas fa-users" style="color:#1e40af; font-size:1.5rem; margin-right:0.7rem;"></i>
+                        <span style="font-size:1.15rem; font-weight:600; color:#1e293b;">Organizing Secretaries CVCCN-2026</span>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:1.2rem;">
+                        <div style="display:flex; align-items:flex-start; gap:0.8rem; background:#f1f5f9; border-radius:8px; padding:1rem 1rem 0.7rem 1rem; box-shadow:0 2px 8px rgba(30,64,175,0.04);">
+                            <i class="fas fa-user-tie" style="color:#1e40af; font-size:1.3rem; margin-top:0.2rem;"></i>
+                            <div>
+                                <div style="font-weight:700; color:#1e293b;">Dr. S. Majumder</div>
+                                <div style="color:#475569; font-size:0.98rem;">Asst. Prof., ECE, NIT Raipur</div>
+                                <div style="margin-top:0.2rem; color:#1e40af; font-size:1rem;"><i class="fas fa-phone"></i> <a href="tel:+919424200516" style="color:#1e40af; text-decoration:none;">+91 9424200516</a></div>
+                                <div style="color:#0e7490; font-size:0.98rem;"><i class="fas fa-envelope"></i> <a href="mailto:smajumder.ece@nitrr.ac.in" style="color:#0e7490; text-decoration:none;">smajumder.ece@nitrr.ac.in</a></div>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:flex-start; gap:0.8rem; background:#f1f5f9; border-radius:8px; padding:1rem 1rem 0.7rem 1rem; box-shadow:0 2px 8px rgba(30,64,175,0.04);">
+                            <i class="fas fa-user-tie" style="color:#1e40af; font-size:1.3rem; margin-top:0.2rem;"></i>
+                            <div>
+                                <div style="font-weight:700; color:#1e293b;">Dr. A. Gupta</div>
+                                <div style="color:#475569; font-size:0.98rem;">Asst. Prof., ECE, NIT Raipur</div>
+                                <div style="margin-top:0.2rem; color:#1e40af; font-size:1rem;"><i class="fas fa-phone"></i> <a href="tel:+917587033313" style="color:#1e40af; text-decoration:none;">+91 7587033313</a></div>
+                                <div style="color:#0e7490; font-size:0.98rem;"><i class="fas fa-envelope"></i> <a href="mailto:agupta.ece@nitrr.ac.in" style="color:#0e7490; text-decoration:none;">agupta.ece@nitrr.ac.in</a></div>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:flex-start; gap:0.8rem; background:#f1f5f9; border-radius:8px; padding:1rem 1rem 0.7rem 1rem; box-shadow:0 2px 8px rgba(30,64,175,0.04);">
+                            <i class="fas fa-user-tie" style="color:#1e40af; font-size:1.3rem; margin-top:0.2rem;"></i>
+                            <div>
+                                <div style="font-weight:700; color:#1e293b;">Dr. Ashish Kumar</div>
+                                <div style="color:#475569; font-size:0.98rem;">Asst. Prof., ECE, NIT Raipur</div>
+                                <div style="margin-top:0.2rem; color:#1e40af; font-size:1rem;"><i class="fas fa-phone"></i> <a href="tel:+919461230731" style="color:#1e40af; text-decoration:none;">+91 9461230731</a></div>
+                                <div style="color:#0e7490; font-size:0.98rem;"><i class="fas fa-envelope"></i> <a href="mailto:akumar.ece@nitrr.ac.in" style="color:#0e7490; text-decoration:none;">akumar.ece@nitrr.ac.in</a></div>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:flex-start; gap:0.8rem; background:#f1f5f9; border-radius:8px; padding:1rem 1rem 0.7rem 1rem; box-shadow:0 2px 8px rgba(30,64,175,0.04);">
+                            <i class="fas fa-user-tie" style="color:#1e40af; font-size:1.3rem; margin-top:0.2rem;"></i>
+                            <div>
+                                <div style="font-weight:700; color:#1e293b;">Dr. Mayur V. Katwe</div>
+                                <div style="color:#475569; font-size:0.98rem;">Asst. Prof., ECE, NIT Raipur</div>
+                                <div style="margin-top:0.2rem; color:#1e40af; font-size:1rem;"><i class="fas fa-phone"></i> <a href="tel:+919405320412" style="color:#1e40af; text-decoration:none;">+91 9405320412</a></div>
+                                <div style="color:#0e7490; font-size:0.98rem;"><i class="fas fa-envelope"></i> <a href="mailto:mvkatwe.ece@nitrr.ac.in" style="color:#0e7490; text-decoration:none;">mvkatwe.ece@nitrr.ac.in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:center; margin:2.5rem 0 0.5rem 0;">
+    <div style="background:#f1f5f9; border-radius:14px; box-shadow:0 2px 12px rgba(30,64,175,0.07); padding:1.1rem 2.2rem; display:flex; align-items:center; gap:0.7rem; min-width:260px;">
+        <i class="fas fa-code" style="color:#1e40af; font-size:1.3rem;"></i>
+        <span style="font-size:1.13rem; color:#334155; font-weight:500; letter-spacing:0.5px;">
+            Developed by <span style="color:#1e40af; font-weight:700;">Rahul Kumar Singh</span> (ECE) and <span style="color:#1e40af; font-weight:700;">Nishant Kumar</span> (ECE)
+        </span>
+    </div>
+</div>
+    </section>
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CVCCN 2026</h4>
+                    <p>International Conference on Computer Vision, Communication, Computing and Nanoelectronics</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Conference</a></li>
+                        <li><a href="#call-for-papers">Call for Papers</a></li>
+                        <li><a href="#registration">Registration</a></li>
+                        <li><a href="#speakers">Keynote Speakers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Dates</h4>
+                    <ul>
+                        <li>Paper Submission: Apr 1, 2025</li>
+                        <li>Acceptance Notification: Sep 15, 2025</li>
+                        <li>Camera Ready: Jun 1, 2025</li>
+                        <li>Early Bird Registration: Nov 15, 2025</li>
+                        <li>Registration End: Nov 30, 2025</li>
+                        <li>Conference: Jan 20-21, 2026</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> smajumder.ece@nitrr.ac.in</p>
+                    <p><i class="fas fa-phone"></i> +91 9424200516</p>
+                    <p><i class="fas fa-map-marker-alt"></i> NIT Raipur, India</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #94a3b8;">Conference website coming soon...</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CVCCN. All rights reserved. | Organized by Department of Electronics & Communication Engineering, NIT Raipur</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Go to top" style="display:none; position:fixed; bottom:30px; right:30px; z-index:1000; background:#1e40af; color:white; border:none; border-radius:50%; width:48px; height:48px; font-size:1.5rem; box-shadow:0 4px 12px rgba(30,64,175,0.15); cursor:pointer; transition:background 0.2s;">
+        &#8679;
+    </button>
+    <script type="module" src="./src/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('site-loader');
+                if(loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(function() { loader.style.display = 'none'; }, 300);
+                }
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
